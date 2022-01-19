@@ -30,27 +30,50 @@ const printStacks = () => {
 }
 
 // Next, what do you think this function should do?
-const movePiece = () => {
-  // Your code here
+const movePiece = (towerOrigin, towerDestination) => {
 
+  //user moves block
+  //check to make sure user move is allowed
+  //only allow user to move smaller stone on top of larger stone or empty tower
+  if (stacks[towerOrigin][stacks[towerOrigin].length -1] < stacks[towerDestination][stacks[towerDestination].length -1] || stacks[towerDestination] == 0) {
+    stacks[towerDestination].push(stacks[towerOrigin].pop());
+  } else {
+    console.log("illegal move");  //user cannot stack larger stone ontop of smaller stone
+  }
 }
 
 // Before you move, should you check if the move it actually allowed? Should 3 be able to be stacked on 2
-const isLegal = () => {
-  // Your code here
+const isLegal = (towerOrigin, towerDestination) => {
 
+  // check to make sure user move is allowed
+  // user cannot stack larger stone ontop of smaller stone
+  // only allow user to move smaller stone on top of larger stone or empty tower
+  if (stacks[towerOrigin][stacks[towerOrigin].length -1] < stacks[towerDestination][stacks[towerDestination].length -1] || stacks[towerDestination] == 0) {
+    return true;
+  } else {
+    return false;
+  }
+  
 }
+
 
 // What is a win in Towers of Hanoi? When should this function run?
 const checkForWin = () => {
-  // Your code here
+
+  //check if all blocks are stacked onto tower 1 or 2
+  if (stacks.b.length === 4 || stacks.a.length === 4) {
+    console.log("You Win!"); //if user has won notify winner
+    return true;
+  } else {
+    return false;
+  }
 
 }
 
 // When is this function called? What should it do with its argument?
-const towersOfHanoi = (startStack, endStack) => {
-  // Your code here
-
+const towersOfHanoi = (towerOrigin, towerDestination) => {
+  movePiece(towerOrigin, towerDestination);
+  checkForWin();
 }
 
 const getPrompt = () => {
