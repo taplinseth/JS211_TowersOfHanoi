@@ -3,21 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <h1>Towers Of Hanoi</h1>
     <hr/>
-      <div id="top-row" data-row="top" class="red row" onclick="selectRow(this)"></div>
-      <div id="middle-row" data-row="middle" class="yellow row" onclick="selectRow(this)"></div>
-      <div id="bottom-row" class="green row" data-row="bottom" onclick="selectRow(this)">
+    <div class="container">
+      <div id="top-row" data-row="top" class="red row"></div>
+      <div id="middle-row" data-row="middle" class="yellow row"></div>
+      <div id="bottom-row" data-row="bottom" class="green row">
         <div id="4" data-size="4" data-color="yellow" class="stone" ></div>
         <div id="3" data-size="3" data-color="red" class="stone" ></div>
         <div id="2" data-size="2" data-color="green" class="stone" ></div>
         <div id="1" data-size="1" data-color="blue" class="stone" ></div>
       </div>
-    <hr/>
+    </div>
+    <li class="instructions">INSTRUCTIONS</li>
+      <ul>The goal is to move all stones to the middle row.</ul>
+      <ul>Rule 1: You are only allowed to move one stone at a time.</ul>
+      <ul>Rule 2: You are only allowed to stack a smaller stone on top of a larger stone.</ul>
+      <ul>Click on a stone to pick it up.</ul>
+      <ul>Click on the desired row to drop the stone.</ul>
+    <div id="win"></div>
   </body>
 </html>
 
