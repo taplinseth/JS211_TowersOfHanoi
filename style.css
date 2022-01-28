@@ -12,14 +12,17 @@
 }
 
 [data-row].red {
+  height: 100px;
   background-color: #f6c5c5;
 }
 
 [data-row].yellow {
+  height: 100px;
   background-color: #ffffa9;
 }
 
 [data-row].green {
+  height: 100px;
   background-color: #baf6ba;
 }
 
@@ -37,22 +40,22 @@
 }
 
 [data-color="blue"] {
-  height: 33px;
+  height: 25px;
   background-color: blue;
 }
 
 [data-color="green"] {
-  height: 33px;
+  height: 50px;
   background-color: green;
 }
 
 [data-color="red"] {
-  height: 33px;
+  height: 75px;
   background-color: red;
 }
 
 [data-color="yellow"] {
-  height: 33px;
+  height: 100px;
   background-color: yellow;
 }
 
